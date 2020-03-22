@@ -73,11 +73,9 @@ module.exports = function toReadable(number) {
         str = str.substring(0, str.length - 2);
         str = str.concat("0".repeat(2))
         lastTwoDigitsArr[0] = lastTwoDigits;
-        console.log(lastTwoDigitsArr);
     }
 
     strSplitArr = str.split("");
-    console.log(strSplitArr);
 
     strSplitArr.forEach(function (element, ndx) {
         if (ndx !== strSplitArr.length - 1 && element !== "0") {
@@ -85,8 +83,8 @@ module.exports = function toReadable(number) {
             resArr.push(element);
         } else {
             resArr.push(element);
-            if(ndx === strSplitArr.length-1 && lastTwoDigitsArr.length){
-              resArr.push(lastTwoDigits);
+            if (ndx === strSplitArr.length - 1 && lastTwoDigitsArr.length) {
+                resArr.push(lastTwoDigits);
             }
         }
     });
